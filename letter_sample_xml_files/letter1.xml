@@ -1,0 +1,117 @@
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" ID="P0b002ee198599b85">
+<name type="corporate" xmlns:exslt="http://exslt.org/common">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm authority="marcrelator" type="text">publisher</roleTerm>
+  <roleTerm authority="marcrelator" type="code">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm authority="marcrelator" type="text">distributor</roleTerm>
+  <roleTerm authority="marcrelator" type="code">dst</roleTerm>
+</role>
+</name>
+<name type="corporate" xmlns:exslt="http://exslt.org/common">
+ <namePart>United States</namePart>
+ <namePart>National Archives and Records Administration</namePart>
+ <namePart>Office of the Federal Register</namePart>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language xmlns:exslt="http://exslt.org/common">
+ <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+</language>
+<extension xmlns:exslt="http://exslt.org/common">
+ <collectionCode>DCPD</collectionCode>
+ <category>Budget and Presidential Materials</category>
+ <branch>executive</branch>
+ <dateIngested>2018-02-07</dateIngested>
+</extension>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>Executive Office of the President</namePart>
+ <role>
+  <roleTerm authority="marcrelator" type="text">originator</roleTerm>
+  <roleTerm authority="marcrelator" type="code">org</roleTerm>
+</role>
+ <description>United States Government Agency</description>
+</name>
+<name type="personal">
+ <namePart>Donald J. Trump</namePart>
+ <role>
+  <roleTerm authority="marcrelator" type="text">originator</roleTerm>
+  <roleTerm authority="marcrelator" type="code">org</roleTerm>
+</role>
+ <description>President of the United States</description>
+</name>
+<titleInfo>
+ <title>Letter to Congressional Leaders Transmitting Proclamations on Imports of Large Residential Washers and Certain Photovoltaic Cells</title>
+</titleInfo>
+<location xmlns:exslt="http://exslt.org/common">
+ <url displayLabel="Content Detail" access="object in context">https://www.gpo.gov/fdsys/pkg/DCPD-201800046/content-detail.html</url>
+ <url displayLabel="HTML rendition" access="raw object">https://www.gpo.gov/fdsys/pkg/DCPD-201800046/html/DCPD-201800046.htm</url>
+ <url displayLabel="PDF rendition" access="raw object">https://www.gpo.gov/fdsys/pkg/DCPD-201800046/pdf/DCPD-201800046.pdf</url>
+</location>
+<identifier type="presidential proclamation number">Proclamation </identifier>
+<identifier type="preferred citation">DCPD-201800046</identifier>
+<note>Identical letters were sent to Paul D. Ryan, Speaker of the House of Representatives, and Michael R. Pence, President of the Senate.</note>
+<subject>
+ <topic>Commerce, international:Residential washers and photovoltaic cells, U.S. tariffs</topic>
+</subject>
+<extension>
+ <searchTitle>Letter to Congressional Leaders Transmitting Proclamations on Imports of Large Residential Washers and Certain Photovoltaic Cells;DCPD-201800046</searchTitle>
+</extension>
+<originInfo xmlns:exslt="http://exslt.org/common">
+ <publisher>Office of the Federal Register, National Archives and Records Administration</publisher>
+ <dateIssued encoding="w3cdtf">2018-01-23</dateIssued>
+ <issuance>continuing</issuance>
+ <frequency authority="marcfrequency">daily</frequency>
+</originInfo>
+<physicalDescription xmlns:exslt="http://exslt.org/common">
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+ <extent>1 p.</extent>
+</physicalDescription>
+<classification authority="sudocs"></classification>
+<classification authority="lcs"></classification>
+<identifier type="uri" xmlns:exslt="http://exslt.org/common">https://www.gpo.gov/fdsys/pkg/DCPD-201800046</identifier>
+<identifier type="local" xmlns:exslt="http://exslt.org/common">P0b002ee198599b85</identifier>
+<identifier type="ILS system id" xmlns:exslt="http://exslt.org/common">000599742</identifier>
+<identifier type="Child ILS system id" xmlns:exslt="http://exslt.org/common">000599742</identifier>
+<recordInfo xmlns:exslt="http://exslt.org/common">
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2018-02-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2018-02-07</recordChangeDate>
+ <recordIdentifier source="DGPO">DCPD-201800046</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination" xmlns:exslt="http://exslt.org/common">fdlp</accessCondition>
+<extension xmlns:exslt="http://exslt.org/common">
+ <docClass>PRESDOC</docClass>
+ <dcpdCategory>
+                      <level1>Communications to Congress</level1>
+                      <level2>Residential washers and photovoltaic cells, imports into U.S., letter transmitting proclamations</level2>
+                </dcpdCategory>
+ <subject>
+                      <level1>Commerce, international</level1>
+                      <level2>Residential washers and photovoltaic cells, U.S. tariffs</level2>
+                </subject>
+ <notes>Identical letters were sent to Paul D. Ryan, Speaker of the House of Representatives, and Michael R. Pence, President of the Senate.</notes>
+ <accessId>DCPD-201800046</accessId>
+ <president id="DJT" party="R">
+                      <name type="authority-lnf">Trump, Donald J.</name>
+                      <name type="authority-fnf">Donald J. Trump</name>
+                      <name type="authority-other">Donald Trump</name>
+                      <name type="authority-other">Donald John Trump</name>
+                </president>
+ <presidentialDoc type="PROCLA"></presidentialDoc>
+</extension>
+<identifier type="presidential proclamation number" xmlns:exslt="http://exslt.org/common">Proclamation </identifier>
+</mods>
