@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><mods xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" ID="id-WCPD-2009-01-19-Pg78">
+<name type="corporate">
+<namePart>United States Government Publishing Office</namePart>
+<role>
+<roleTerm authority="marcrelator" type="text">publisher</roleTerm>
+<roleTerm authority="marcrelator" type="code">pbl</roleTerm>
+</role>
+<role>
+<roleTerm authority="marcrelator" type="text">distributor</roleTerm>
+<roleTerm authority="marcrelator" type="code">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+<namePart>United States</namePart>
+<namePart>National Archives and Records Administration</namePart>
+<namePart>Office of the Federal Register</namePart>
+<role>
+<roleTerm authority="marcrelator" type="text">author</roleTerm>
+<roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+<description>Government Organization</description>
+</name>
+<name type="corporate">
+<namePart>United States</namePart>
+<namePart>Executive Office of the President</namePart>
+<role>
+<roleTerm authority="marcrelator" type="text">author</roleTerm>
+<roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+<description>United States Government Agency</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+<languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+</language>
+<extension>
+<collectionCode>WCPD</collectionCode>
+<category>Budget and Presidential Materials</category>
+<waisDatabaseName>2009_presidential_documents</waisDatabaseName>
+<branch>executive</branch>
+<dateIngested>2010-08-03</dateIngested>
+</extension>
+<name type="personal">
+<namePart>George W. Bush</namePart>
+<role>
+<roleTerm authority="marcrelator" type="text">author</roleTerm>
+<roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+<description>President of the United States</description>
+</name>
+<genre authority="marcgt">article</genre>
+<titleInfo>
+<title>Letter to Congressional Leaders on Review of Title III of the Cuban Liberty and Democratic Solidarity (LIBERTAD) Act of 1996</title>
+</titleInfo>
+<relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19/html/WCPD-2009-01-19-Pg78.htm">
+<identifier type="FDsys Unique ID">D09002ee1959e55b0</identifier>
+</relatedItem>
+<relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19/pdf/WCPD-2009-01-19-Pg78.pdf">
+<identifier type="FDsys Unique ID">D09002ee1959e5601</identifier>
+</relatedItem>
+<identifier type="WCPD citation">45 WCPD 78</identifier>
+<identifier type="uri">https://www.gpo.gov/fdsys/granule/WCPD-2009-01-19/WCPD-2009-01-19-Pg78</identifier>
+<identifier type="former granule identifier">pd19ja09_txt-29</identifier>
+<location>
+<url displayLabel="Content Detail" access="object in context">https://www.gpo.gov/fdsys/granule/WCPD-2009-01-19/WCPD-2009-01-19-Pg78/content-detail.html</url>
+<url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19/pdf/WCPD-2009-01-19-Pg78.pdf</url>
+<url access="raw object" displayLabel="HTML rendition">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19/html/WCPD-2009-01-19-Pg78.htm</url>
+</location>
+<subject>
+<topic>Communications to Congress</topic>
+</subject>
+<physicalDescription>
+<extent>1 p.</extent>
+</physicalDescription>
+<part type="article">
+<extent unit="pages">
+<start>78</start>
+<end>78</end>
+</extent>
+</part>
+<identifier type="preferred citation">45 WCPD 78</identifier>
+<relatedItem>
+<titleInfo>
+<title>United States Public Law 104-114</title>
+</titleInfo>
+<identifier type="public law citation">Public Law 104-114</identifier>
+</relatedItem>
+<extension>
+<searchTitle>Letter to Congressional Leaders on Review of Title III of the Cuban Liberty and Democratic Solidarity (LIBERTAD) Act of 1996; Weekly Compilation of Presidential Documents Vol. 45, No. 2</searchTitle>
+<granuleClass>PRESDOCU</granuleClass>
+<accessId>WCPD-2009-01-19-Pg78</accessId>
+<eventDate>2009-01-15</eventDate>
+<president id="GWB" party="R">
+                        <name type="authority-lnf">Bush, George W.</name>
+                        <name type="authority-fnf">George W. Bush</name>
+                        <name type="authority-other">George Bush</name>
+                        <name type="authority-other">George Walker Bush</name>
+                    </president>
+<category1>Communications to Congress</category1>
+<notes>Identical letters were sent to David R. Obey, chairman, and Jerry Lewis, ranking member, House Committee on Appropriations; Daniel K. Inouye, chairman, and W. Thad Cochran, ranking member, Senate Committee on Appropriations; Howard L. Berman, chairman, and Ileana Ros-Lehtinen, ranking member, House Committee on Foreign Affairs; and Joseph R. Biden, Jr., chairman, and Richard G. Lugar, ranking member, Senate Committee on Foreign Relations.</notes>
+<law congress="104" isPrivate="false" number="114"/>
+</extension>
+<relatedItem type="host" ID="P0b002ee1802dacfe">
+<titleInfo>
+<title>Weekly Compilation of Presidential Documents</title>
+<partNumber>Vol. 45, no. 2</partNumber>
+</titleInfo>
+<originInfo>
+<publisher>Office of the Federal Register, National Archives and Records Administration</publisher>
+<dateIssued encoding="w3cdtf">2009-01-19</dateIssued>
+<issuance>continuing</issuance>
+<frequency>weekly</frequency>
+</originInfo>
+<physicalDescription>
+<note type="source content type">deposited</note>
+<digitalOrigin>born digital</digitalOrigin>
+<extent>68 p.</extent>
+</physicalDescription>
+<classification authority="sudocs">AE 2.109:</classification>
+<classification authority="sudocs">GS 4.114:</classification>
+<identifier type="local">P0b002ee1802dacfe</identifier>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19</identifier>
+<identifier type="ILS system id">000599742</identifier>
+<identifier type="former package identifier">pd19ja09_txt</identifier>
+<identifier type="preferred citation">45 WCPD 31</identifier>
+<location>
+<url displayLabel="Content Detail" access="object in context">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19/content-detail.html</url>
+<url displayLabel="PDF rendition" access="raw object">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-19/pdf/WCPD-2009-01-19.pdf</url>
+</location>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<part type="issue">
+<extent unit="pages">
+<start>31</start>
+<end>93</end>
+</extent>
+</part>
+<recordInfo>
+<recordContentSource authority="marcorg">DGPO</recordContentSource>
+<recordCreationDate encoding="w3cdtf">2010-08-03</recordCreationDate>
+<recordChangeDate encoding="w3cdtf">2017-07-18</recordChangeDate>
+<recordIdentifier source="DGPO">WCPD-2009-01-19</recordIdentifier>
+<recordOrigin>machine generated</recordOrigin>
+<languageOfCataloging>
+<languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<extension>
+<docClass>WCPD</docClass>
+<accessId>WCPD-2009-01-19</accessId>
+<weekEndingDate>2009-01-16</weekEndingDate>
+<volume>45</volume>
+<issue>2</issue>
+</extension>
+</relatedItem>
+</mods>
