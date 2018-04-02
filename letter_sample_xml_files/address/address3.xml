@@ -1,0 +1,149 @@
+<mods version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" ID="id-WCPD-2009-01-12-Pg1">
+    <name type="corporate">
+        <namePart>United States Government Publishing Office</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">publisher</roleTerm>
+            <roleTerm authority="marcrelator" type="code">pbl</roleTerm>
+        </role>
+        <role>
+            <roleTerm authority="marcrelator" type="text">distributor</roleTerm>
+            <roleTerm authority="marcrelator" type="code">dst</roleTerm>
+        </role>
+    </name>
+    <name type="corporate">
+        <namePart>United States</namePart>
+        <namePart>National Archives and Records Administration</namePart>
+        <namePart>Office of the Federal Register</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+        <description>Government Organization</description>
+    </name>
+    <name type="corporate">
+        <namePart>United States</namePart>
+        <namePart>Executive Office of the President</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+        <description>United States Government Agency</description>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">government publication</genre>
+    <language>
+        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+    </language>
+    <extension>
+        <collectionCode>WCPD</collectionCode>
+        <category>Budget and Presidential Materials</category>
+        <waisDatabaseName>2009_presidential_documents</waisDatabaseName>
+        <branch>executive</branch>
+        <dateIngested>2010-08-03</dateIngested>
+    </extension>
+    <name type="personal">
+        <namePart>George W. Bush</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+        <description>President of the United States</description>
+    </name>
+    <genre authority="marcgt">article</genre>
+    <titleInfo>
+        <title>The President's Radio Address</title>
+    </titleInfo>
+    <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12/html/WCPD-2009-01-12-Pg1.htm">
+        <identifier type="FDsys Unique ID">D09002ee1959e4c87</identifier>
+    </relatedItem>
+    <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12/pdf/WCPD-2009-01-12-Pg1.pdf">
+        <identifier type="FDsys Unique ID">D09002ee1959e4ca0</identifier>
+    </relatedItem>
+    <identifier type="WCPD citation">45 WCPD 1</identifier>
+    <identifier type="uri">https://www.gpo.gov/fdsys/granule/WCPD-2009-01-12/WCPD-2009-01-12-Pg1</identifier>
+    <identifier type="former granule identifier">pd12ja09_txt-3</identifier>
+    <location>
+        <url displayLabel="Content Detail" access="object in context">https://www.gpo.gov/fdsys/granule/WCPD-2009-01-12/WCPD-2009-01-12-Pg1/content-detail.html</url>
+        <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12/pdf/WCPD-2009-01-12-Pg1.pdf</url>
+        <url access="raw object" displayLabel="HTML rendition">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12/html/WCPD-2009-01-12-Pg1.htm</url>
+    </location>
+    <subject>
+        <topic>Addresses and Remarks</topic>
+    </subject>
+    <physicalDescription>
+        <extent>2 p.</extent>
+    </physicalDescription>
+    <part type="article">
+        <extent unit="pages">
+            <start>1</start>
+            <end>2</end>
+        </extent>
+    </part>
+    <identifier type="preferred citation">45 WCPD 1</identifier>
+    <extension>
+        <searchTitle>The President's Radio Address; Weekly Compilation of Presidential Documents Vol. 45, No. 1</searchTitle>
+        <granuleClass>PRESDOCU</granuleClass>
+        <accessId>WCPD-2009-01-12-Pg1</accessId>
+        <eventDate>2009-01-02</eventDate>
+        <president id="GWB" party="R">
+            <name type="authority-lnf">Bush, George W.</name>
+            <name type="authority-fnf">George W. Bush</name>
+            <name type="authority-other">George Bush</name>
+            <name type="authority-other">George Walker Bush</name>
+        </president>
+        <category1>Addresses and Remarks</category1>
+        <notes>The address was recorded at 10 a.m. on January 2 in the Cabinet Room at the White House for broadcast at 10:06 a.m. on January 3. The transcript was made available by the Office of the Press Secretary on January 2. In his address, the President referred to King Abdallah bin Abd al-Aziz Al Saud of Saudi Arabia; King Abdullah II of Jordan; President Mohamed Hosni Mubarak of Egypt; President Mahmoud Abbas (Abu Mazen) and Prime Minister Salam Fayyad of the Palestinian Authority; Prime Minister Ehud Olmert of Israel; and President-elect Barack Obama. The Office of the Press Secretary also released a Spanish language transcript of this address. This item was not received in time for publication in the appropriate issue.</notes>
+    </extension>
+    <relatedItem type="host" ID="P0b002ee1802dad72">
+        <titleInfo>
+            <title>Weekly Compilation of Presidential Documents</title>
+            <partNumber>Vol. 45, no. 1</partNumber>
+        </titleInfo>
+        <originInfo>
+            <publisher>Office of the Federal Register, National Archives and Records Administration</publisher>
+            <dateIssued encoding="w3cdtf">2009-01-12</dateIssued>
+            <issuance>continuing</issuance>
+            <frequency>weekly</frequency>
+        </originInfo>
+        <physicalDescription>
+            <note type="source content type">deposited</note>
+            <digitalOrigin>born digital</digitalOrigin>
+            <extent>33 p.</extent>
+        </physicalDescription>
+        <classification authority="sudocs">AE 2.109:</classification>
+        <classification authority="sudocs">GS 4.114:</classification>
+        <identifier type="local">P0b002ee1802dad72</identifier>
+        <identifier type="uri">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12</identifier>
+        <identifier type="ILS system id">000599742</identifier>
+        <identifier type="former package identifier">pd12ja09_txt</identifier>
+        <identifier type="preferred citation">45 WCPD 1</identifier>
+        <location>
+            <url displayLabel="Content Detail" access="object in context">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12/content-detail.html</url>
+            <url displayLabel="PDF rendition" access="raw object">https://www.gpo.gov/fdsys/pkg/WCPD-2009-01-12/pdf/WCPD-2009-01-12.pdf</url>
+        </location>
+        <accessCondition type="GPO scope determination">fdlp</accessCondition>
+        <part type="issue">
+            <extent unit="pages">
+                <start>1</start>
+                <end>30</end>
+            </extent>
+        </part>
+        <recordInfo>
+            <recordContentSource authority="marcorg">DGPO</recordContentSource>
+            <recordCreationDate encoding="w3cdtf">2010-08-03</recordCreationDate>
+            <recordChangeDate encoding="w3cdtf">2017-07-18</recordChangeDate>
+            <recordIdentifier source="DGPO">WCPD-2009-01-12</recordIdentifier>
+            <recordOrigin>machine generated</recordOrigin>
+            <languageOfCataloging>
+                <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+            </languageOfCataloging>
+        </recordInfo>
+        <extension>
+            <docClass>WCPD</docClass>
+            <accessId>WCPD-2009-01-12</accessId>
+            <weekEndingDate>2009-01-09</weekEndingDate>
+            <volume>45</volume>
+            <issue>1</issue>
+        </extension>
+    </relatedItem>
+</mods>
