@@ -3,7 +3,11 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
-
+$('#filter-btn').click(function() {
+	//Reload the page to display the new data.
+	//You could optionally work with Ajax
+	window.location.href="/speakers?name=" + $("#speaker").val() + "&year=" + $("#year").val()
+});
 (function($) {
 
 	skel.breakpoints({
@@ -31,7 +35,6 @@
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
-
 		// Fix: IE.
 			if (skel.vars.browser == 'ie')
 				$body.addClass('is-ie');
