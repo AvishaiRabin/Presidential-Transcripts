@@ -6,10 +6,9 @@ import csv
 app = Flask(__name__, static_url_path='/static')
 @app.route('/')
 def index():
-	return flask.render_template('index.html')
+	#flask.render_template('index.html')
 
-@app.route('/')
-def president():
+
 	format_ = request.args.get("format", None)
 	#president = request.args.get("president", "")
 	year = request.args.get("year", "")
@@ -20,8 +19,8 @@ def president():
 	connection.row_factory = dictionary_factory
 	cursor = connection.cursor()
 
-	all_records_query = "SELECT features.ID as ID, features.Title as Title, features.Notes as Notes, \
-				features.month as month FROM features %s %s;"
+	all_records_query = "SELECT features.Title as Title, features.Notes as Notes, \
+				features.month as Month FROM features %s %s;"
 
 	if year == "All Years":
 		where_clause = ""
@@ -36,7 +35,7 @@ def president():
 	if format_ == "csv":
 		return download_csv(records, "features_%s.csv" % (year))
 	else:
-		selected_year = int(year)
+		selected_year = year
 		return flask.render_template('index.html', records=records, selected_year=selected_year)
 
 def dictionary_factory(cursor, row):

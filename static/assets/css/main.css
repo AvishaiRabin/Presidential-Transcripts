@@ -2523,6 +2523,10 @@
 	}
 
 /* Table */
+my_table{
+    margin-top:10px //moves your table 10pixels down
+    margin-left:10px //moves your table 10pixels right
+}
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
@@ -2530,7 +2534,8 @@
 	}
 
 	table {
-		margin: 0 0 2em 0;
+
+		margin:25px 0 0 25px;
 		width: 100%;
 	}
 

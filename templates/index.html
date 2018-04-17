@@ -16,7 +16,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="logo"><strong>Liberating Textual Data</strong></a>
+				<title="index" class="logo"><strong>Liberating Textual Data</strong></title>
 			</header>
 
 		<!-- Banner -->
@@ -32,11 +32,8 @@
 
 		<!-- One -->
 			<article id="one" class="post style1">
-				<div class="image">
-					<img src="static/images/whitehouse.jpg" alt="" data-position="75% center" />
-				</div>
 				<div class="content">
-					<div class="inner">
+					<div class="inner" align="right">
 						<form method="GET" id="search">
 							<header>
 								<h2><center>Choose your criteria.  Make sure they don't conflict!</center></h2>
@@ -117,13 +114,47 @@
 								</select>
 								<br>
 							</div>
+							<!-- Table -->
 							<div class="col-md-3">
 								<button style="width:100%;" form = "search" class="btn btn-primary" id="filter-btn">Filter</button>
-
 							</div>
-						</form>
+						</frrm>
 					</div>
-				</article>
+				</div>
+				<div class="content">
+					<div class="inner" align="right" style="width:100%">
+							<div class="col-md-12">
+								<table class="table table-striped thead-dark" align="text-center">
+									<thead class="text-center">
+										<td>Title</td>
+										<td>Month</td>
+										<td>Notes</td>
+									</thead>
+									<tbody>
+										{% if (records is defined) and records %}
+											{% for record in records %}
+												<tr>
+													<td>{{record.Title}}</td>
+													<td>{{record.Month}}</td>
+													<td>{{record.Notes}}</td>
+													<!-- This line shows just the first 100 characters and cuts it after that -->
+													<td>{{record.text[0:100] + " ..."}}</td>
+												</tr>
+											{% endfor %}
+										{% else %}
+										<tr>
+											<td colspan="4">No results</td>
+										</tr>
+										{% endif %}
+									</tbody>
+								</table>
+							</div>
+							<hr>
+							<p>Sneek peak of what you will download</p>
+							<!-- end table -->
+					</div>
+				</div>
+			</article>
 
 		<!-- Footer -->
 			<footer id="footer">
