@@ -32,7 +32,7 @@
 
 		<!-- One -->
 			<article id="one" class="post style1">
-				<div class="content">
+				<div class="content" style="width:30%;">
 					<div class="inner" align="right">
 						<form method="GET" id="search">
 							<header>
@@ -41,11 +41,10 @@
 							<div class="col-md-3">
 								<select class="form-control" type="text" id="president">
 									<option value="All Presidents">All Presidents</option>
-									<option value="George H.W. Bush">George H.W. Bush</option>
-									<option value="Bill Clinton">Bill Clinton</option>
+									<option value="William J. Clinton">William J. Clinton</option>
 									<option value="George W. Bush">George W. Bush</option>
-									<option value="Barack Obama">Barack Obama</option>
-									<option value="Donald Trump">Donald Trump</option>
+									<option value="Barack H. Obama">Barack H. Obama</option>
+									<option value="Donald J. Trump">Donald J. Trump</option>
 								</select>
 								<br>
 							</div>
@@ -121,24 +120,31 @@
 						</frrm>
 					</div>
 				</div>
-				<div class="content">
-					<div class="inner" align="right" style="width:100%">
-							<div class="col-md-12">
-								<table class="table table-striped thead-dark" align="text-center">
+				<div class="content" style="width:70%;">
+					<div class="inner" align="right">
+							<div>
+								<table class="table table-striped thead-dark" >
 									<thead class="text-center">
-										<td>Title</td>
-										<td>Month</td>
-										<td>Notes</td>
+										<td><small>President</small></td>
+										<td><small>Document Type</small></td>
+										<td><small>Topics</small></td>
+										<td><small>Title</small></td>
+										<td><small>Month</small></td>
+										<td><small>Year</small></td>
+										<td><small>Notes</small></td>
 									</thead>
 									<tbody>
 										{% if (records is defined) and records %}
 											{% for record in records %}
 												<tr>
+													<td>{{record.President}}</td>
+													<td>{{record.DocType}}</td>
+													<td>{{record.Topics}}</td>
 													<td>{{record.Title}}</td>
 													<td>{{record.Month}}</td>
+													<td>{{record.Year}}</td>
 													<td>{{record.Notes}}</td>
 													<!-- This line shows just the first 100 characters and cuts it after that -->
-													<td>{{record.text[0:100] + " ..."}}</td>
 												</tr>
 											{% endfor %}
 										{% else %}
@@ -149,8 +155,6 @@
 									</tbody>
 								</table>
 							</div>
-							<hr>
-							<p>Sneek peak of what you will download</p>
 							<!-- end table -->
 					</div>
 				</div>

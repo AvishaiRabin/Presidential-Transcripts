@@ -2524,7 +2524,8 @@
 
 /* Table */
 my_table{
-    margin-top:10px //moves your table 10pixels down
+ /*   margin-top:2px //moves your table 10pixels down */
+    margin-bottom:100px
     margin-left:10px //moves your table 10pixels right
 }
 
@@ -2533,11 +2534,12 @@ my_table{
 		overflow-x: auto;
 	}
 
-	table {
+	/* table {
 
-		margin:25px 0 0 25px;
-		width: 100%;
-	}
+		margin:5px 0 0 5px;
+		width: 5%;
+		height: 5%;
+	} */
 
 		table tbody tr {
 			border: solid 1px;
@@ -2550,10 +2552,10 @@ my_table{
 		}
 
 		table th {
-			font-size: 0.9em;
-			font-weight: 700;
+			font-size: 0.5em;
+			font-weight: 500;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
 
 		table thead {
@@ -3636,10 +3638,9 @@ my_table{
 			-webkit-order: 1;
 			-ms-order: 1;
 			order: 1;
-			width: 50%;
-			display: block;
+			display: inline-flex;
 			background: #FFF;
-			padding: 8em;
+			padding: 6em 3em;
 			text-align: right;
 			position: relative;
 		}

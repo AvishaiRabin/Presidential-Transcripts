@@ -20,23 +20,29 @@ def index():
 	cursor = connection.cursor()
 
 	all_records_query = "SELECT features.Title as Title, features.Notes as Notes, \
-				features.month as Month FROM features %s %s;"
+				features.Month as Month, features.Year as Year, pres.PresidentName as presname, \
+				doc_category.DocumentCategory as doctype, people.People as people, topics.Topic as topic \
+				FROM features, features_to_people, people, features_to_topics, topics, pres \
+				where features.PresidentID = pres.ID AND features.ID = features_to_people.FeatureID \
+				AND features_to_people.PeopleID = people.ID AND features.ID = features_to_topics.FeatureID \
+				AND features_to_topics.TopicID = topics.ID and LIMIT 4;"
 
-	if year == "All Years":
-		where_clause = ""
-	else:
-		where_clause = "where features.Year = ?"
-	limit_statement = "limit 20" if format_ != "csv" else ""
-	all_records_query = all_records_query % (where_clause, limit_statement)
-	cursor.execute(all_records_query ,("%"+ year,))
+	#if year == "All Years":
+#		where_clause = ""
+#	else:
+#		where_clause = "where features.Year = ?"
+#	limit_statement = "limit 20" if format_ != "csv" else ""
+#	all_records_query = all_records_query % (where_clause, limit_statement)
+#	cursor.execute(all_records_query ,("%"+ year,))
+	cursor.execute(all_records_query)
 	records = cursor.fetchall()
+	print(records)
 	connection.close()
 
 	if format_ == "csv":
 		return download_csv(records, "features_%s.csv" % (year))
 	else:
-		selected_year = year
-		return flask.render_template('index.html', records=records, selected_year=selected_year)
+		return flask.render_template('index.html', records=records, year=year)
 
 def dictionary_factory(cursor, row):
 	"""
