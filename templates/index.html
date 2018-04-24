@@ -40,7 +40,7 @@
 							</header>
 							<div class="col-md-3">
 								<select class="form-control" type="text" id="president">
-									<option value="All Presidents">All Presidents</option>
+									<option value="">All Presidents</option>
 									<option value="William J. Clinton">William J. Clinton</option>
 									<option value="George W. Bush">George W. Bush</option>
 									<option value="Barack H. Obama">Barack H. Obama</option>
@@ -50,7 +50,7 @@
 							</div>
 							<div class="col-md-3">
 								<select class="form-control" id="year">
-									<option value="All Years">All years</option>
+									<option value="">All Years</option>
 									<option value="1992">1992</option>
 									<option value="1993">1993</option>
 									<option value="1994">1994</option>
@@ -83,7 +83,7 @@
 							</div>
 							<div class="col-md-3">
 								<select class="form-control" id="month">
-									<option value="All Months">All Months</option>
+									<option value="">All Months</option>
 									<option value="January">January</option>
 									<option value="February">February</option>
 									<option value="March">March</option>
@@ -101,7 +101,7 @@
 							</div>
 							<div class="col-md-3">
 								<select class="form-control" id="document">
-									<option value="All Documents">All Documents</option>
+									<option value="">All Documents</option>
 									<option value="Proclamation">Proclamation</option>
 									<option value="Memorandum">Memorandum</option>
 									<option value="Executive Order">Executive Order</option>
@@ -114,10 +114,14 @@
 								<br>
 							</div>
 							<!-- Table -->
-							<div class="col-md-3">
-								<button style="width:100%;" form = "search" class="btn btn-primary" id="filter-btn">Filter</button>
-							</div>
-						</frrm>
+						</form>
+						<div class="col-md-3">
+							<button style="width:100%;" class="btn btn-primary" id="filter-btn">Filter</button>
+						</div>
+						<hr>
+						<div class="col-md-3">
+							<button style="width:100%;" class="btn btn-default" id="download-btn">Download</button>
+						</div>
 					</div>
 				</div>
 				<div class="content" style="width:70%;">
@@ -139,12 +143,11 @@
 												<tr>
 													<td>{{record.President}}</td>
 													<td>{{record.DocType}}</td>
-													<td>{{record.Topics}}</td>
+													<td>{{record.Topic}}</td>
 													<td>{{record.Title}}</td>
 													<td>{{record.Month}}</td>
 													<td>{{record.Year}}</td>
 													<td>{{record.Notes}}</td>
-													<!-- This line shows just the first 100 characters and cuts it after that -->
 												</tr>
 											{% endfor %}
 										{% else %}
@@ -169,9 +172,9 @@
 
 		<!-- Scripts -->
 			<script src="static/assets/js/jquery.min.js"></script>
-			<script src="static/assets/js/jquery.scrolly.min.js"></script>
-			<script src="static/assets/js/skel.min.js"></script>
-			<script src="static/assets/js/util.js"></script>
+			<!-- <script src="static/assets/js/jquery.scrolly.min.js"></script> -->
+			<!-- <script src="static/assets/js/skel.min.js"></script> -->
+			<!-- <script src="static/assets/js/util.js"></script> -->
 			<script src="static/assets/js/main.js"></script>
 
 	</body>

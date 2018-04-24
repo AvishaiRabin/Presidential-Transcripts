@@ -4,11 +4,27 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 $('#filter-btn').click(function() {
-	//Reload the page to display the new data.
-	//You could optionally work with Ajax
-	window.location.href="/speakers?name=" + $("#speaker").val() + "&year=" + $("#year").val()
+	url = "/?"
+	if ($("#president").val()) url += "president=" + $("#president").val() + "&"
+	if ($("#year").val())      url += "year=" + $("#year").val() + "&"
+	if ($("#month").val())     url += "month=" + $("#month").val()  + "&"
+	if ($("#document").val())  url += "document=" + $("#document").val() + "&"
+	url += "#one"
+	window.location.href = url;
 });
-(function($) {
+$('#download-btn').click(function() {
+	url = "/?format=csv&"
+	/*if ($("#president").val()) url += "president=" + $("#president").val() + "&"
+	if ($("#year").val())      url += "year=" + $("#year").val() + "&"
+	if ($("#month").val())     url += "month=" + $("#month").val()  + "&"
+	if ($("#document").val())  url += "document=" + $("#document").val() + "&"*/
+	url += "#one"
+	window.location.href = url;
+});
+
+
+
+/*(function($) {
 
 	skel.breakpoints({
 		xlarge:	'(max-width: 1680px)',
@@ -33,12 +49,7 @@ $('#filter-btn').click(function() {
 				}, 100);
 			});
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-		// Fix: IE.
-			if (skel.vars.browser == 'ie')
-				$body.addClass('is-ie');
-
+		//
 		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {
 				$.prioritize(
@@ -52,19 +63,6 @@ $('#filter-btn').click(function() {
 				speed: 1000,
 				offset: $header.outerHeight() -1
 			});
-
-		// Menu.
-			$('#menu')
-				.append('<a href="#menu" class="close"></a>')
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'right'
-				});
 
 		// Posts.
 			var $posts = $('.post');
@@ -84,6 +82,7 @@ $('#filter-btn').click(function() {
 
 			});
 
+
 	});
 
-})(jQuery);
+})(jQuery); */

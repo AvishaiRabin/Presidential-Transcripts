@@ -7,42 +7,46 @@ app = Flask(__name__, static_url_path='/static')
 @app.route('/')
 def index():
 	#flask.render_template('index.html')
-
-
 	format_ = request.args.get("format", None)
-	#president = request.args.get("president", "")
+	president = request.args.get("president", "")
 	year = request.args.get("year", "")
-#	month = request.args.get("month", "")
-#	document = request.args.get("document", "")
+	month = request.args.get("month", "")
+	document = request.args.get("document", "")
 
 	connection = sqlite3.connect("mydatabase.sqlite")
 	connection.row_factory = dictionary_factory
 	cursor = connection.cursor()
 
 	all_records_query = "SELECT features.Title as Title, features.Notes as Notes, \
-				features.Month as Month, features.Year as Year, pres.PresidentName as presname, \
-				doc_category.DocumentCategory as doctype, people.People as people, topics.Topic as topic \
-				FROM features, features_to_people, people, features_to_topics, topics, pres \
+				features.Month as Month, features.Year as Year, pres.PresidentName as President, \
+				doc_category.DocumentCategory as DocType, people.People as People, topics.Topic as Topic \
+				FROM features, features_to_people, people, features_to_topics, topics, pres, doc_category \
 				where features.PresidentID = pres.ID AND features.ID = features_to_people.FeatureID \
 				AND features_to_people.PeopleID = people.ID AND features.ID = features_to_topics.FeatureID \
-				AND features_to_topics.TopicID = topics.ID and LIMIT 4;"
+				AND features_to_topics.TopicID = topics.ID AND features.DocumentCategoryID = doc_category.ID %s LIMIT 4;"
+	appended_clause = ""
+	conditions_tuple = []
+	if len(president) != 0:
+		appended_clause += "AND pres.PresidentName = ?"
+		conditions_tuple.append(president)
+	if len(year) != 0:
+		appended_clause += "AND features.Year = ?"
+		conditions_tuple.append(year)
+	if len(month) != 0:
+		appended_clause += "AND features.Month = ?"
+		conditions_tuple.append(month)
+	if len(document) != 0:
+		appended_clause += "AND doc_category.DocumentCategory = ?"
+		conditions_tuple.append(document)
 
-	#if year == "All Years":
-#		where_clause = ""
-#	else:
-#		where_clause = "where features.Year = ?"
-#	limit_statement = "limit 20" if format_ != "csv" else ""
-#	all_records_query = all_records_query % (where_clause, limit_statement)
-#	cursor.execute(all_records_query ,("%"+ year,))
-	cursor.execute(all_records_query)
+	cursor.execute(all_records_query % (appended_clause), tuple(conditions_tuple))
 	records = cursor.fetchall()
-	print(records)
 	connection.close()
 
 	if format_ == "csv":
-		return download_csv(records, "features_%s.csv" % (year))
+		return download_csv(records, "presidential_document.csv")
 	else:
-		return flask.render_template('index.html', records=records, year=year)
+		return flask.render_template('index.html', records=records)
 
 def dictionary_factory(cursor, row):
 	"""
