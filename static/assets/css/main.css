@@ -14,7 +14,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
+		font-size: 75%;
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -43,6 +43,9 @@
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
+		display: block;
+	  height: 400px;
+	  overflow-y: scroll;
 	}
 
 	body {
@@ -1591,7 +1594,7 @@
 
 	body, input, select, textarea {
 		font-family: "Lato", Arial, Helvetica, sans-serif;
-		font-size: 16pt;
+		font-size: 8pt;
 		font-weight: 300;
 		line-height: 1.75;
 	}
@@ -1599,7 +1602,7 @@
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 13pt;
+				font-size: 5pt;
 			}
 
 		}
@@ -1643,15 +1646,15 @@
 		}
 
 	h1 {
-		font-size: 2.35em;
+		font-size: 10em;
 	}
 
 	h2 {
-		font-size: 1.75em;
+		font-size: 10em;
 	}
 
 	h3 {
-		font-size: 1.35em;
+		font-size: 10em;
 	}
 
 	h4 {
@@ -1689,7 +1692,7 @@
 		border-radius: 0;
 		border: solid 1px;
 		font-family: "Courier New", monospace;
-		font-size: 0.9em;
+		font-size: 10em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 	}
@@ -1697,7 +1700,7 @@
 	pre {
 		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;
-		font-size: 0.9em;
+		font-size: 10em;
 		margin: 0 0 2em 0;
 	}
 
@@ -1851,7 +1854,7 @@
 		input[type="button"].small,
 		button.small,
 		.button.small {
-			font-size: 0.8em;
+			font-size: 10em;
 		}
 
 		input[type="submit"].big,
@@ -1982,7 +1985,7 @@
 
 	label {
 		display: block;
-		font-size: 0.9em;
+		font-size: 10em;
 		font-weight: 700;
 		margin: 0 0 1em 0;
 	}
@@ -2077,7 +2080,7 @@
 			text-decoration: none;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 1em;
+			font-size: 10em;
 			font-weight: 300;
 			padding-left: 2.4em;
 			padding-right: 0.75em;
@@ -2366,7 +2369,7 @@
 				}
 
 				ul.icons li .icon:before {
-					font-size: 2em;
+					font-size: 10em;
 				}
 
 		ul.actions {
@@ -2502,7 +2505,7 @@
 	}
 
 	header h2 + p {
-		font-size: 1.25em;
+		font-size: 10em;
 		margin-top: -1em;
 	}
 
@@ -2552,7 +2555,7 @@ my_table{
 		}
 
 		table th {
-			font-size: 0.5em;
+			font-size: 10em;
 			font-weight: 500;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: center;
@@ -3090,7 +3093,7 @@ my_table{
 			position: absolute;
 			top: 0;
 			color: #fff;
-			font-size: 1.25em;
+			font-size: 1em;
 			text-decoration: none;
 		}
 
@@ -3277,7 +3280,7 @@ my_table{
 			}
 
 			#menu .close:before {
-				font-size: 1.25em;
+				font-size: 10em;
 			}
 
 			#menu .close:hover {
@@ -3556,7 +3559,7 @@ my_table{
 		@media screen and (max-width: 1280px) {
 
 			#banner h1 {
-				font-size: 2.75em;
+				font-size: 2.5em;
 			}
 
 				#banner h1 br {
@@ -3572,7 +3575,7 @@ my_table{
 			}
 
 				#banner h1 {
-					font-size: 2em;
+					font-size: 10em;
 				}
 
 		}
@@ -3589,7 +3592,7 @@ my_table{
 		}
 
 			#main .inner header p {
-				font-size: 1em;
+				font-size: 10em;
 				font-style: italic;
 				border-top: 1px solid rgba(144, 144, 144, 0.25);
 				border-bottom: 1px solid rgba(144, 144, 144, 0.25);
@@ -3661,11 +3664,11 @@ my_table{
 			}
 
 			.post .content header h2 {
-				font-size: 2.35em;
+				font-size: 1em;
 			}
 
 			.post .content header p {
-				font-size: 1em;
+				font-size: 10em;
 				font-style: italic;
 				border-top: 1px solid rgba(144, 144, 144, 0.25);
 				border-bottom: 1px solid rgba(144, 144, 144, 0.25);
@@ -4514,7 +4517,7 @@ my_table{
 			}
 
 				.post .content header h2 {
-					font-size: 1.75em;
+					font-size: 10.75em;
 				}
 
 			.post .button {
