@@ -23,7 +23,7 @@ def index():
 				FROM features, features_to_people, people, features_to_topics, topics, pres, doc_category \
 				where features.PresidentID = pres.ID AND features.ID = features_to_people.FeatureID \
 				AND features_to_people.PeopleID = people.ID AND features.ID = features_to_topics.FeatureID \
-				AND features_to_topics.TopicID = topics.ID AND features.DocumentCategoryID = doc_category.ID %s LIMIT 4;"
+				AND features_to_topics.TopicID = topics.ID AND features.DocumentCategoryID = doc_category.ID %s %s;"
 	appended_clause = ""
 	conditions_tuple = []
 	if len(president) != 0:
@@ -38,14 +38,15 @@ def index():
 	if len(document) != 0:
 		appended_clause += "AND doc_category.DocumentCategory = ?"
 		conditions_tuple.append(document)
-
-	cursor.execute(all_records_query % (appended_clause), tuple(conditions_tuple))
-	records = cursor.fetchall()
-	connection.close()
-
 	if format_ == "csv":
+		cursor.execute(all_records_query % (appended_clause, ""), tuple(conditions_tuple))
+		records = cursor.fetchall()
+		connection.close()
 		return download_csv(records, "presidential_document.csv")
 	else:
+		cursor.execute(all_records_query % (appended_clause, "LIMIT 10"), tuple(conditions_tuple))
+		records = cursor.fetchall()
+		connection.close()
 		return flask.render_template('index.html', records=records)
 
 def dictionary_factory(cursor, row):
