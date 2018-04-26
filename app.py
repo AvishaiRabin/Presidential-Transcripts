@@ -17,34 +17,54 @@ def index():
 	connection.row_factory = dictionary_factory
 	cursor = connection.cursor()
 
-	all_records_query = "SELECT features.Title as Title, features.Notes as Notes, \
-				features.Month as Month, features.Year as Year, pres.PresidentName as President, \
-				doc_category.DocumentCategory as DocType, people.People as People, topics.Topic as Topic \
-				FROM features, features_to_people, people, features_to_topics, topics, pres, doc_category \
-				where features.PresidentID = pres.ID AND features.ID = features_to_people.FeatureID \
-				AND features_to_people.PeopleID = people.ID AND features.ID = features_to_topics.FeatureID \
-				AND features_to_topics.TopicID = topics.ID AND features.DocumentCategoryID = doc_category.ID %s %s;"
-	appended_clause = ""
+	all_records_query = "SELECT f.Title as Title, f.Notes as Notes, \
+				f.Month as Month, f.Year as Year, p.PresidentName as President, \
+				dc.DocumentCategory as DocType, pe.People as People, t.Topic as Topic \
+				FROM features f INNER JOIN pres p ON f.PresidentID = p.ID LEFT JOIN features_to_people ftp ON \
+				f.ID = ftp.FeatureID LEFT JOIN people pe ON ftp.PeopleID = pe.ID LEFT JOIN features_to_topics ftt ON \
+				f.ID = ftt.FeatureID LEFT JOIN topics t ON ftt.TopicID = t.ID LEFT JOIN doc_category dc ON \
+				f.DocumentCategoryId = dc.ID %s %s;"
+	"""	features_to_people, people, features_to_topics, topics, pres, doc_category \
+	where features.PresidentID = pres.ID AND features.ID = features_to_people.FeatureID \
+	AND features_to_people.PeopleID = people.ID AND features.ID = features_to_topics.FeatureID \
+	AND features_to_topics.TopicID = topics.ID AND features.DocumentCategoryID = doc_category.ID %s %s;"""
+	appended_clause = "WHERE "
+	appended = False
 	conditions_tuple = []
 	if len(president) != 0:
-		appended_clause += "AND pres.PresidentName = ?"
+		appended_clause += "p.PresidentName = ?"
 		conditions_tuple.append(president)
+		appended = True
 	if len(year) != 0:
-		appended_clause += "AND features.Year = ?"
+		if not appended:
+			appended_clause += "f.Year = ?"
+		else:
+			appended_clause += "AND f.Year = ?"
 		conditions_tuple.append(year)
+		appended = True
 	if len(month) != 0:
-		appended_clause += "AND features.Month = ?"
+		if not appended:
+			appended_clause += "f.Month = ?"
+		else:
+			appended_clause += "AND f.Month = ?"
 		conditions_tuple.append(month)
+		appended = True
 	if len(document) != 0:
-		appended_clause += "AND doc_category.DocumentCategory = ?"
+		if not appended:
+			appended_clause += "dc.DocumentCategory = ?"
+		else:
+			appended_clause += "AND dc.DocumentCategory = ?"
 		conditions_tuple.append(document)
+		appended = True
+	if not appended:
+		appended_clause = ""
 	if format_ == "csv":
 		cursor.execute(all_records_query % (appended_clause, ""), tuple(conditions_tuple))
 		records = cursor.fetchall()
 		connection.close()
 		return download_csv(records, "presidential_document.csv")
 	else:
-		cursor.execute(all_records_query % (appended_clause, "LIMIT 10"), tuple(conditions_tuple))
+		cursor.execute(all_records_query % (appended_clause, "LIMIT 20"), tuple(conditions_tuple))
 		records = cursor.fetchall()
 		connection.close()
 		return flask.render_template('index.html', records=records)
