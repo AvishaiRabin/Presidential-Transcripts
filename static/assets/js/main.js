@@ -9,6 +9,8 @@ $('#filter-btn').click(function() {
 	if ($("#year").val())      url += "year=" + $("#year").val() + "&"
 	if ($("#month").val())     url += "month=" + $("#month").val()  + "&"
 	if ($("#document").val())  url += "document=" + $("#document").val() + "&"
+	if ($("#topic").val())     url += "topic=" + $("#topic").val() + "&"
+	if ($("#people").val())    url += "people=" + $("#people").val() + "&"
 	url += "#one"
 	window.location.href = url;
 });

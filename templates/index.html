@@ -18,12 +18,13 @@
 			<header id="header">
 				<title="index" class="logo"><strong>Liberating Textual Data</strong></title>
 			</header>
-
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
 					<h1>What would you like to search?<br />
 					</h1>
+					<small>Please be patient while your documents load</small>
+					<hr>
 					<ul class="actions">
 						<li><a href="#one" class="button alt scrolly big">Search</a></li>
 					</ul>
@@ -32,7 +33,7 @@
 
 		<!-- One -->
 			<article id="one" class="post style1">
-				<div class="content" style="width:30%;">
+				<div class="content" style="width:27%;">
 					<div class="inner" align="right">
 						<form method="GET" id="search">
 							<header>
@@ -111,6 +112,15 @@
 									<option values="Remark">Remark</option>
 								</select>
 							</div>
+							<br>
+							<div class = "col-md-3">
+								<input class="form-control" type="text" placeholder="Enter a Topic" id="topic"/>
+							</div>
+							<br>
+							<div class = "col-md-3">
+								<input class="form-control" type="text" placeholder="Enter a Person" id="people"/>
+								<!-- <small class="text-center"><Last name, first name</small> -->
+							</div>
 							<!-- Table -->
 						</form>
 						<div class="col-md-3">
@@ -126,14 +136,16 @@
 					<div class="inner" align="right">
 							<div>
 								<table class="table table-striped thead-dark" >
-									<thead class="text-center">
+									<thead class="text-center" style="font-weight:bold;">
 										<td><small>President</small></td>
 										<td><small>Document Type</small></td>
-										<td><small>Topics</small></td>
 										<td><small>Title</small></td>
+										<td><small>Topics</small></td>
+										<td><small>People</small></td>
 										<td><small>Month</small></td>
 										<td><small>Year</small></td>
 										<td><small>Notes</small></td>
+										<td><small>Text</small></td>
 									</thead>
 									<tbody>
 										{% if (records is defined) and records %}
@@ -141,11 +153,13 @@
 												<tr>
 													<td>{{record.President}}</td>
 													<td>{{record.DocType}}</td>
-													<td>{{record.Topic}}</td>
 													<td>{{record.Title}}</td>
+													<td>{{record.Topic}}</td>
+													<td>{{record.People}}</td>
 													<td>{{record.Month}}</td>
 													<td>{{record.Year}}</td>
-													<td>{{record.Notes}}</td>
+													<td>{{record.Notes[0:50] + "..."}}</td>
+													<td>{{"..." + record.Text[50:150] + "..."}}</td>
 												</tr>
 											{% endfor %}
 										{% else %}
@@ -155,6 +169,8 @@
 										{% endif %}
 									</tbody>
 								</table>
+								<hr>
+								<center> This is just a sneak peak!  Click "Download" for the full table</center>
 							</div>
 							<!-- end table -->
 					</div>

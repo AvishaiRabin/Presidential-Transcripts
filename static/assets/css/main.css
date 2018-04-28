@@ -4446,7 +4446,7 @@ my_table{
 		@media screen and (max-width: 1280px) {
 
 			.post .content {
-				padding: 4em;
+				padding: 2em;
 			}
 
 				.post .content .postnav {

@@ -12,18 +12,20 @@ def index():
 	year = request.args.get("year", "")
 	month = request.args.get("month", "")
 	document = request.args.get("document", "")
+	topic = request.args.get("topic", "")
+	people = request.args.get("people", "")
 
 	connection = sqlite3.connect("mydatabase.sqlite")
 	connection.row_factory = dictionary_factory
 	cursor = connection.cursor()
 
-	all_records_query = "SELECT f.Title as Title, f.Notes as Notes, \
+	all_records_query = "SELECT f.Title as Title, COALESCE(f.Notes, 'None') as Notes, \
 				f.Month as Month, f.Year as Year, p.PresidentName as President, \
-				dc.DocumentCategory as DocType, pe.People as People, t.Topic as Topic \
+				dc.DocumentCategory as DocType, pe.People as People, t.Topic as Topic, te.Text as Text\
 				FROM features f INNER JOIN pres p ON f.PresidentID = p.ID LEFT JOIN features_to_people ftp ON \
 				f.ID = ftp.FeatureID LEFT JOIN people pe ON ftp.PeopleID = pe.ID LEFT JOIN features_to_topics ftt ON \
 				f.ID = ftt.FeatureID LEFT JOIN topics t ON ftt.TopicID = t.ID LEFT JOIN doc_category dc ON \
-				f.DocumentCategoryId = dc.ID %s %s;"
+				f.DocumentCategoryId = dc.ID INNER JOIN text te ON f.ID = te.FeaturesID %s %s;"
 	"""	features_to_people, people, features_to_topics, topics, pres, doc_category \
 	where features.PresidentID = pres.ID AND features.ID = features_to_people.FeatureID \
 	AND features_to_people.PeopleID = people.ID AND features.ID = features_to_topics.FeatureID \
@@ -56,6 +58,20 @@ def index():
 			appended_clause += "AND dc.DocumentCategory = ?"
 		conditions_tuple.append(document)
 		appended = True
+	if len(topic) != 0:
+		if not appended:
+			appended_clause += "t.Topic = ?"
+		else:
+			appended_clause += "AND t.Topic = ?"
+		conditions_tuple.append(topic)
+		appended = True
+	if len(people) != 0:
+		if not appended:
+			appended_clause += "pe.People = ?"
+		else:
+			appended_clause += "AND pe.People = ?"
+		conditions_tuple.append(people)
+		appended=True
 	if not appended:
 		appended_clause = ""
 	if format_ == "csv":
